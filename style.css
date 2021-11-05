@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: grey;
+}
+
+
+nav{
+    background-color: black;
+    color: whitesmoke;
+    font-size: 1.6rem;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid whitesmoke;
+    position: fixed;
+}
+
+/*
+*     --->  Nav Up  <---
+ */
+
+ul li{
+    list-style-type: none;
+    line-height: 50px;
+    cursor: pointer;
+    animation-name: transi;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+#list{
+    display: flex;
+    justify-content: center;
+
+}
+
+#list .list_menu{
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+
+
+/*
+* ------> Nav Down
+ */
+
+.sous_menu .sous_list{
+    color: black;
+    display: none;
+    font-size: 1rem;
+    background-color: black;
+    border-bottom: solid whitesmoke;
+    border-right: whitesmoke ;
+    border-width: 1px;
+}
+
+#list> .list_menu:hover ul li{
+    display: block;
+    color: whitesmoke;
+}
+
+
+span{
+    display: none;
+}
+
+
+p{
+    padding: 10%;
+}
+
+@media screen and (max-width: 480px){
+
+    nav{
+        color: whitesmoke;
+        font-size: 1rem;
+        text-align: left;
+        width: 100%;
+        height: 40%;
+
+    }
+
+    #list{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sous_menu .sous_list{
+        display: none;
+        font-size: 0.8rem;
+        background-color: transparent;
+        border: none;
+        border-right: whitesmoke ;
+        border-width: 2px 1.5em;
+    }
+
+
+    #list> .list_menu:hover ul li{
+        display: inline-block;
+        color: darkred;
+    }
+
+    span{
+        display: inline-block;
+    }
+
+    p{
+        font-size: 0.8rem;
+        padding: 40px;
+    }
+}
+
+li:first-letter{
+    text-transform: uppercase;
+}
+
+@keyframes transi {
+    from {
+        color: white;
+    }
+
+    to{
+        color: grey;
+    }
+}
